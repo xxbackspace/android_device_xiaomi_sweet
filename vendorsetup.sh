@@ -58,7 +58,7 @@ echo -e "${CYAN}=== Starting clone process ===${RESET}"
 echo "Full log: $LOG_FILE"
 echo
 
-clone "Clone common tree"        "https://github.com/PixelOS-Devices/android_device_xiaomi_sm6150-common.git" "device/xiaomi/sm6150-common"
+clone "Clone common tree"        "https://github.com/xxbackspace/android_device_xiaomi_sm6150-common.git" "device/xiaomi/sm6150-common"
 clone "Clone vendor common"      "https://gitlab.com/NoPrincessHere/proprietary_vendor_xiaomi_sm6150-common.git" "vendor/xiaomi/sm6150-common" "seventeen"
 clone "Clone vendor sweet"       "https://gitlab.com/NoPrincessHere/proprietary_vendor_xiaomi_sweet.git" "vendor/xiaomi/sweet" "seventeen"
 clone "Clone MiuiCamera sweet"   "https://gitlab.com/NoPrincessHere/proprietary_vendor_miuicamera-sweet.git" "vendor/miuicamera-sweet" "seventeen"
