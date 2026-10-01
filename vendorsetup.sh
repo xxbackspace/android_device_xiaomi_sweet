@@ -62,7 +62,7 @@ clone "Clone common tree"        "https://github.com/xxbackspace/android_device_
 clone "Clone vendor common"      "https://gitlab.com/NoPrincessHere/proprietary_vendor_xiaomi_sm6150-common.git" "vendor/xiaomi/sm6150-common" "seventeen"
 clone "Clone vendor sweet"       "https://gitlab.com/NoPrincessHere/proprietary_vendor_xiaomi_sweet.git" "vendor/xiaomi/sweet" "seventeen"
 clone "Clone MiuiCamera sweet"   "https://gitlab.com/NoPrincessHere/proprietary_vendor_miuicamera-sweet.git" "vendor/miuicamera-sweet" "seventeen"
-clone "Clone kernel sm6150"      "https://github.com/PixelOS-Devices/android_kernel_xiaomi_sm6150.git" "kernel/xiaomi/sm6150"
+clone "Clone Reforge kernel"     "https://github.com/manipvlator/los_kernel_xiaomi_sm6150.git" "kernel/xiaomi/sm6150"
 clone "Clone hardware xiaomi"    "https://github.com/LineageOS/android_hardware_xiaomi.git" "hardware/xiaomi"
 clone "Clone sony dolby"         "https://github.com/sweet-stuffs/proprietary_vendor_sony_dolby.git" "vendor/sony/dolby" "16"
 clone "Clone LunarisDolby"       "https://github.com/sweet-stuffs/android_packages_apps_LunarisDolby.git" "packages/apps/LunarisDolby"
