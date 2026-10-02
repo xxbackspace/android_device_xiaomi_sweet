@@ -67,6 +67,32 @@ clone "Clone hardware xiaomi"    "https://github.com/LineageOS/android_hardware_
 clone "Clone sony dolby"         "https://github.com/sweet-stuffs/proprietary_vendor_sony_dolby.git" "vendor/sony/dolby" "16"
 clone "Clone LunarisDolby"       "https://github.com/sweet-stuffs/android_packages_apps_LunarisDolby.git" "packages/apps/LunarisDolby"
 
+# KernelSU And NoMount Integration
+KERNEL_DIR="kernel/xiaomi/sm6150"
+
+# Check Kernel Directory
+if [ ! -d "$KERNEL_DIR" ]; then
+    echo -e "${RED}[!] Kernel directory not found: $KERNEL_DIR${RESET}"
+    exit 1
+fi
+
+# KernelSU Integration
+echo -e "\n${CYAN}--- KernelSU Integration ---${RESET}"
+echo -e "${GREEN}[+] Integrating KernelSU...${RESET}"
+pushd "$KERNEL_DIR" > /dev/null || exit 1
+curl -LSs "https://raw.githubusercontent.com/manipvlator/KernelSU/refs/heads/main/kernel/setup.sh" | bash -s main
+popd > /dev/null || exit 1
+
+# NoMount Integration
+echo -e "\n${CYAN}--- NoMount Integration ---${RESET}"
+echo -e "${GREEN}[+] Integrating NoMount...${RESET}"
+pushd "$KERNEL_DIR" > /dev/null || exit 1
+curl -LSs "https://raw.githubusercontent.com/maxsteeel/nomount/refs/heads/dev/kernel/setup.sh" | bash -
+popd > /dev/null || exit 1
+
+echo -e "\n${CYAN}-----------------------------${RESET}"
+echo -e "${GREEN}[+] Kernel integration completed!${RESET}"
+echo -e "${CYAN}-----------------------------${RESET}"
+
 echo
 echo -e "${CYAN}=== Done ($STEP repos processed) ===${RESET}"
-
